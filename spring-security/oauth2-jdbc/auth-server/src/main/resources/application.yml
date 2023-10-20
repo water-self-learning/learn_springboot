@@ -1,0 +1,10 @@
+logging:
+  level:
+    root: debug
+spring:
+  datasource:
+    #配置数据源
+    url: jdbc:mysql://192.168.31.190:3306/authz-server
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
