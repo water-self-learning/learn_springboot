@@ -19,6 +19,15 @@ spring:
         max-idle: 10
         #当连接池到达上限后,最多等待30秒尝试获取连接,超时报错
         max-wait: 30000
+    # 哨兵使用的配置
+#    sentinel:
+#      nodes: 192.168.31.110:26379, 192.168.31.111:26379, 192.168.31.112:26379
+#      master: mymaster
+
+    # 集群使用的配置
+    cluster:
+      nodes: 192.168.31.110:6379, 192.168.31.111:6379, 192.168.31.112:6379
+      max-redirects: 3
   cache:
     redis:
       cache-null-values: true
